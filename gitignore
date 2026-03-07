@@ -1,0 +1,10 @@
+# Pastas de dependências (caso você use pacotes no futuro)
+node_modules/
+# Arquivos de sistema e editores
+.DS_Store
+Thumbs.db
+.vscode/
+# Logs de erro
+*.log
+# Caso você venha a usar variáveis de ambiente
+.env

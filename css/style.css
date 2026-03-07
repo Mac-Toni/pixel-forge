@@ -1,0 +1,278 @@
+:root {
+    /* As cores da Pixel Forge */
+    --verde-neon: #39FF14;
+    --laranja-neon: #FF5F1F;
+    --preto-profundo: #0B0B0B;
+    --cinza-escuro: #1A1A1A;
+}
+
+.logo-text {
+    font-size: 2.2rem; /* Tamanho maior para destaque */
+    font-weight: 800; /* Mais negrito */
+    color: white;
+}
+
+body {
+    background-color: var(--preto-profundo);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.pixel-highlight {
+    color: var(--verde-neon);
+}
+
+.forge-button {
+    background-color: var(--laranja-neon);
+    color: var(--preto-profundo);
+    font-weight: bold;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+/* Configurações Gerais */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilo do Mascote com tamanho controlado */
+.mascote-pixel {
+    width: 280px; /* Teste com 280px, se achar pequeno, mude para 300px */
+    height: 280px;
+    object-fit: cover; /* Garante que a imagem não distorça */
+    border-radius: 50%;
+    border: 3px solid var(--verde-neon);
+    box-shadow: 0 0 20px var(--verde-neon);
+    display: block;
+    margin: 0 auto; /* Centraliza a imagem */
+}
+
+/* Layout Responsivo (Hero) */
+#hero {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 20px;
+}
+
+.hero-content {
+    flex: 1;
+    min-width: 300px;
+}
+
+/* Ajuste do container para que ele não empurre o texto */
+.hero-image-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Grid de Serviços */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.service-card {
+    background-color: var(--cinza-escuro);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--laranja-neon);
+}
+
+.service-icon {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 5px var(--verde-neon)); /* Brilho neon nos ícones! */
+}
+
+.service-card .icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    color: var(--laranja-neon);
+}
+
+/* Mobile First: Ajustes para telas pequenas */
+@media (max-width: 768px) {
+    #hero {
+        text-align: center;
+        flex-direction: column-reverse;
+    }
+    
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
+/* Botão com Efeito Glow Neon */
+.forge-button {
+    background-color: var(--laranja-neon);
+    color: var(--preto-profundo);
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px var(--laranja-neon);
+}
+
+.forge-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--laranja-neon), 0 0 40px var(--laranja-neon);
+    background-color: #ff7f4d; /* Um laranja levemente mais claro no hover */
+}
+
+/* Animação de pulsação suave para o destaque Verde Neon */
+@keyframes pulse-green {
+    0% { text-shadow: 0 0 5px var(--verde-neon); }
+    50% { text-shadow: 0 0 15px var(--verde-neon), 0 0 25px var(--verde-neon); }
+    100% { text-shadow: 0 0 5px var(--verde-neon); }
+}
+
+.pixel-highlight {
+    color: var(--verde-neon);
+    animation: pulse-green 2s infinite ease-in-out;
+}
+.contact-section {
+    padding: 80px 20px;
+    background-color: var(--cinza-escuro); /* Fundo levemente diferente para destacar */
+}
+
+.contact-card {
+    background-color: var(--preto-profundo);
+    border: 2px solid var(--laranja-neon);
+    padding: 50px;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(255, 95, 31, 0.2);
+}
+
+.contact-card h2 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.whatsapp-button {
+    display: inline-block;
+    margin-top: 30px;
+    background-color: var(--laranja-neon);
+    color: var(--preto-profundo);
+    padding: 18px 40px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.whatsapp-button:hover {
+    background-color: var(--verde-neon); /* O botão muda para verde no hover! */
+    box-shadow: 0 0 20px var(--verde-neon);
+    transform: scale(1.05);
+}
+
+.contact-info {
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+/* Barra de Estatísticas para preencher o vazio */
+.stats-bar {
+    background: linear-gradient(90deg, var(--preto-profundo), var(--cinza-escuro));
+    padding: 40px 0;
+    border-top: 1px solid rgba(57, 255, 20, 0.1);
+    border-bottom: 1px solid rgba(57, 255, 20, 0.1);
+    margin: 40px 0;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+.stat-number {
+    display: block;
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--verde-neon);
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.3);
+}
+
+.stat-label {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    opacity: 0.8;
+}
+#techstack .section-title {
+    color: #FFFFFF !important; 
+    opacity: 1 !important;
+    font-size: 1.8rem;
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.tech-item {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.4); /* Fica discreto */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+
+.tech-item:hover {
+    color: var(--verde-neon);
+    border-color: var(--verde-neon);
+    background: rgba(57, 255, 20, 0.05);
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(57, 255, 20, 0.1);
+}
+
+/* Adicionando um leve gradiente no fundo do corpo para profundidade */
+body {
+    background: radial-gradient(circle at top right, #1a1a1a, #0b0b0b);
+    background-attachment: fixed;
+}
