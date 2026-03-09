@@ -1,0 +1,204 @@
+.logo-text {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: white;
+}
+
+.pixel-highlight {
+    color: var(--verde-neon);
+    animation: pulse-green 2s infinite ease-in-out;
+    /*font-weight: 800; */
+}
+/* --- DESTAQUE EM LARANJA NEON --- */
+.pixel-highlight-laranja {
+    color: var(--laranja-neon); /* Mudamos a cor base para laranja */
+    animation: pulse-orange 2s infinite ease-in-out; /* Chamamos a nova animação e deixamos um pouco mais lenta (2.5s) para um efeito mais elegante */
+    /*font-weight: 800;  Garante que o texto fique bem negrito para o brilho aparecer */
+}
+
+.mascote-pixel {
+    width: 280px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--verde-neon);
+    box-shadow: 0 0 20px var(--verde-neon);
+    display: block;
+    margin: 0 auto;
+}
+
+/* Ajuste fino para os cards de serviço */
+.services-grid {
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.service-card {
+    background-color: var(--cinza-escuro);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid transparent;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--laranja-neon);
+}
+
+.stat-item {
+    text-align: center;
+    min-width: 150px;
+}
+
+.stat-number {
+    display: block;
+    font-size: 3rem;
+    font-weight: 800;
+    color: var(--laranja-neon); /* Use a cor que preferir, ou alterne */
+    text-shadow: 0 0 15px rgba(255, 95, 31, 0.4);
+    margin-bottom: 5px;
+    font-family: 'Inter', sans-serif;
+}
+
+.stat-label {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--text-white);
+    opacity: 0.7;
+}
+
+/* Efeito ao passar o mouse para dar vida */
+.stat-item:hover .stat-number {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+    color: var(--verde-neon); /* Troca de cor no hover para surpreender */
+    text-shadow: 0 0 20px var(--verde-neon);
+}
+
+.forge-button {
+    background-color: var(--laranja-neon);
+    color: var(--preto-profundo);
+    font-weight: bold;
+    font-size: 1.1rem;
+    border: none;
+    padding: 15px 30px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 5px var(--laranja-neon);
+}
+
+.forge-button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--laranja-neon), 0 0 40px var(--laranja-neon);
+    background-color: #ff7f4d;
+}
+
+.tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.tech-item {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    padding: 10px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+}
+.section-title {
+    text-align: center;
+    font-size: 2.5rem; /* Um pouco menor que o principal, mas ainda forte */
+    font-weight: 800;
+    margin-bottom: 50px;
+    color: var(--text-white);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    opacity: 1; /* Garante que não esteja transparente */
+}
+
+/* Um ajuste extra para a techstack não ficar "colada" no gato/mascote */
+#techstack {
+    padding: 80px 0;
+    margin-top: 40px;
+}
+
+/* O visual dos Chips Tecnológicos */
+.tech-chip {
+    padding: 10px 25px;
+    background: rgba(255, 255, 255, 0.03); /* Fundo quase invisível */
+    border: 1px solid rgba(0, 255, 102, 0.2); /* Borda verde bem suave */
+    border-radius: 50px; /* Formato de pílula */
+    color: var(--text-white);
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    cursor: default;
+}
+
+/* Efeito Hover: O chip "acende" */
+.tech-chip:hover {
+    background: rgba(0, 255, 102, 0.1); /* Fundo verde leve */
+    border-color: var(--verde-neon);    /* Borda acende em verde neon */
+    color: var(--verde-neon);           /* Texto acende */
+    box-shadow: 0 0 15px rgba(0, 255, 102, 0.3); /* Brilho externo */
+    transform: translateY(-5px);        /* Sobe levemente */
+}
+
+/* Se quiser variar as cores */
+.tech-chip.orange-glow:hover {
+    border-color: var(--laranja-neon);
+    color: var(--laranja-neon);
+    box-shadow: 0 0 15px rgba(255, 95, 31, 0.3);
+}
+
+.contact-info {
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+/* Estilo para o texto "Atendimento 100% Digital" */
+.status-text {
+    /*font-family: 'Courier New', Courier, monospace; */
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.7);
+    letter-spacing: 1px;
+}
+
+.whatsapp-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: transparent;
+    color: var(--verde-neon);
+    border: 2px solid var(--verde-neon);
+    padding: 12px 30px;
+    border-radius: 4px;
+    font-weight: 800;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 102, 0.2);
+    margin-top: 10px;
+}
+
+.whatsapp-btn:hover {
+    background: var(--verde-neon);
+    color: #000;
+    box-shadow: 0 0 25px var(--verde-neon);
+    transform: translateY(-3px);
+}

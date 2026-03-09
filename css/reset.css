@@ -1,0 +1,18 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--preto-profundo);
+    background: radial-gradient(circle at top right, #1a1a1a, #0b0b0b);
+    background-attachment: fixed;
+    color: var(--text-white);
+    font-family: var(--font-main);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}

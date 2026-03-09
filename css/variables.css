@@ -1,0 +1,24 @@
+:root {
+    /* As cores da Pixel Forge */
+    --verde-neon: #39FF14;
+    --laranja-neon: #FF5F1F;
+    --preto-profundo: #0B0B0B;
+    --cinza-escuro: #1A1A1A;
+    
+    /* Variáveis de suporte para o estilo global */
+    --font-main: 'Inter', sans-serif;
+    --text-white: #FFFFFF;
+}
+
+/* Animação de pulsação suave para o destaque Verde Neon */
+@keyframes pulse-green {
+    0% { text-shadow: 0 0 5px var(--verde-neon); }
+    50% { text-shadow: 0 0 15px var(--verde-neon), 0 0 25px var(--verde-neon); }
+    100% { text-shadow: 0 0 5px var(--verde-neon); }
+}
+/* --- NOVA ANIMAÇÃO LARANJA NEON --- */
+@keyframes pulse-orange {
+    0% { text-shadow: 0 0 5px var(--laranja-neon), 0 0 10px rgba(255, 95, 31, 0.3); }
+    50% { text-shadow: 0 0 20px var(--laranja-neon), 0 0 30px var(--laranja-neon); }
+    100% { text-shadow: 0 0 5px var(--laranja-neon), 0 0 10px rgba(255, 95, 31, 0.3); }
+}

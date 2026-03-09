@@ -3,16 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pixel Forge | Soluções Digitais</title>
+    <title>Pixel Forge | Soluções Digitais & Engenharia de Software</title>
+    <meta name="description" content="Transformamos ideias complexas em soluções digitais de alta performance. Web, Mobile e Engenharia de Software.">
+    
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="icon" type="image/png" href="assets/images/favicon.png">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
         <nav class="container">
             <div class="logo-text">
-                <span class="pixel-highlight">Pixel</span> Forge
+                <span class="pixel-highlight"> Pixel Forge</span> <br>
+                <span class="pixel-highlight-laranja"> (Web & Mobile)</span>
             </div>
         </nav>
     </header>
@@ -20,83 +27,106 @@
     <main>
         <section id="hero" class="container">
             <div class="hero-content">
-<h1>Seu projeto, nossa <span class="pixel-highlight">forja</span>.</h1>
-<p>Transformamos ideias complexas em soluções digitais de alta performance. Onde o design encontra a engenharia de precisão.</p>                <button class="forge-button">Solicitar Orçamento</button>
+                <h1>Seu projeto, nossa <span class="pixel-highlight">forja</span>.</h1>
+                <br>
+                <p>Transformamos ideias complexas em soluções digitais de alta performance. Onde o design encontra a engenharia de precisão.</p>
+                <br>
+                <button class="forge-button" onclick="window.open('https://wa.me/5553999045223', '_blank')">Solicitar Orçamento</button>
             </div>
             <div class="hero-image-container">
-            <img src="assets/images/pixel-mascote.jpg" alt="Pixel, o gato geek" class="mascote-pixel">            </div>
+                <img src="assets/images/pixel-mascote.jpg" alt="Pixel, o gato geek da Pixel Forge" class="mascote-pixel" loading="eager">
+            </div>
         </section>
 
         <section id="servicos" class="container">
-            <h2 class="section-title">Nossa <span class="pixel-highlight">Forja</span></h2>
-<div class="services-grid">
-    <div class="service-card">
-        <img src="assets/icons/web-icon.svg" alt="Ícone Web" class="service-icon">
-        <h3>Experiências Web</h3>
-        <p>Desenvolvemos interfaces de alto impacto que transformam visitantes em clientes. Sites rápidos, seguros e otimizados para o Google.</p>
-    </div>
+            <h2 class="section-title">Nossa <span class="pixel-highlight">Forja</span></h2>            <div class="services-grid">
+                <div class="service-card">
+                    <img src="assets/icons/web-icon.svg" alt="Ícone Desenvolvimento Web" class="service-icon" loading="lazy">
+                    <h3>Experiências Web</h3>
+                    <p>Interfaces de alto impacto que transformam visitantes em clientes. Sites rápidos e otimizados.</p>
+                </div>
 
-    <div class="service-card">
-        <img src="assets/icons/mobile-icon.svg" alt="Ícone Mobile" class="service-icon">
-        <h3>Ecossistema Mobile</h3>
-        <p>Sua marca na palma da mão do cliente. Criamos aplicativos intuitivos para iOS e Android com foco total na experiência do usuário.</p>
-    </div>
+                <div class="service-card">
+                    <img src="assets/icons/mobile-icon.svg" alt="Ícone Aplicativos Mobile" class="service-icon" loading="lazy">
+                    <h3>Ecossistema Mobile</h3>
+                    <p>Sua marca na palma da mão. Apps intuitivos para iOS e Android com foco total em UX.</p>
+                </div>
 
-    <div class="service-card">
-        <img src="assets/icons/forge-icon.svg" alt="Ícone Forge" class="service-icon">
-        <h3>Engenharia de Software</h3>
-        <p>Forjamos sistemas robustos e escaláveis para automatizar processos complexos. Tecnologia moldada exatamente para o seu modelo de negócio.</p>
-    </div>
-</div>        
-</section>
+                <div class="service-card">
+                    <img src="assets/icons/forge-icon.svg" alt="Ícone Engenharia de Software" class="service-icon" loading="lazy">
+                    <h3>Engenharia de Software</h3>
+                    <p>Sistemas robustos e escaláveis para automatizar processos. Tecnologia moldada ao seu negócio.</p>
+                </div>
+            </div>        
+        </section>
     </main>
+
     <section class="stats-bar">
-    <div class="container stats-container">
-        <div class="stat-item">
-            <span class="stat-number">+100%</span>
-            <span class="stat-label">Código Autoral</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-number">24/7</span>
-            <span class="stat-label">Monitoramento</span>
-        </div>
-        <div class="stat-item">
-            <span class="stat-number">Ultra</span>
-            <span class="stat-label">Performance</span>
-        </div>
-    </div>
-</section>
-<section id="techstack" class="container">
-    <h2 class="section-title" style="font-size: 1.5rem; opacity: 0.6;">Tecnologias que dominamos</h2>
-    <div class="tech-grid">
-        <div class="tech-item">HTML5</div>
-        <div class="tech-item">CSS3</div>
-        <div class="tech-item">JavaScript</div>
-        <div class="tech-item">React</div>
-        <div class="tech-item">Node.js</div>
-        <div class="tech-item">Python</div>
-    </div>
-</section>
-<section id="contato" class="contact-section">
-    <div class="container">
-        <div class="contact-card">
-    <h2>Chega de soluções genéricas.</h2>
-    <p>O **Pixel** já preparou o ambiente. Agora só falta o seu comando para começarmos a forjar seu próximo grande projeto.</p>
-    
-    <a href="https://wa.me/5553999045223" class="whatsapp-button">
-        Iniciar Consultoria Gratuita
-    </a>
-</div>
-            
-            <div class="contact-info">
-                <span>pixelforge.ti@gmail.com</span>
-                <span>Atendimento 100% Digital</span>
+        <div class="container stats-container">
+            <div class="stat-item">
+                <span class="stat-number">+100%</span>
+                <span class="stat-label">Código Autoral</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">24/7</span>
+                <span class="stat-label">Monitoramento</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">Ultra</span>
+                <span class="stat-label">Performance</span>
             </div>
         </div>
-</section>
+    </section>
 
-    <footer>
-        <p>&copy; 2026 Pixel Forge - Onde a tecnologia ganha vida.</p>
-    </footer>
+    <section id="techstack" class="container">
+        <h2 class="section-title">Tecnologias de <span class="highlight-green">Elite</span></h2>
+        <div class="tech-grid">
+            <span class="tech-chip">HTML5</span>
+            <span class="tech-chip">CSS3</span>
+            <span class="tech-chip">JavaScript</span>
+            <span class="tech-chip">React</span>
+            <span class="tech-chip">Node.js</span>
+            <span class="tech-chip">Python</span>
+        </div>
+    </section>
+    <section id="contato" class="contact-section">
+        <div class="container">
+            <div class="contact-card">
+                <h2>Chega de soluções genéricas.</h2>
+                <br>
+                <p>O <strong>Pixel</strong> já preparou o ambiente. Agora só falta o seu comando para começarmos a forjar seu próximo grande projeto.</p>
+                <br>
+                <a> Iniciar Consultoria Gratuita: </a>
+            </div>
+            <br>
+           <div class="contact-info">
+                <span class="pixel-highlight">pixelforge.ti@gmail.com</span><br>
+                <br>
+    
+            <span class="status-text">Atendimento 100% Digital</span><br>
+            <br>
+            <a href="https://wa.me/5511999999999" target="_blank" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i> Iniciar Projeto na Forja</a>
+            </div>
+        </div>
+    </section>
+
+<footer class="main-footer">
+    <div class="footer-content container">
+        <div class="footer-brand">
+            <p class="footer-logo"><span class="pixel-highlight-laranja">Pixel</span><span class="pixel-highlight-laranja"> Forge</span></p><br>
+            <p class="footer-tagline">Forjando soluções, entregando experiências</p>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-info">
+                <p>&copy; 2026 Pixel Forge | Sistemas de Alta Performance</p>
+            </div>
+            <div class="system-status">
+                <span class="status-dot"></span> Status: Online
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
