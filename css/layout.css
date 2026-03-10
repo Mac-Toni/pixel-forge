@@ -1,7 +1,7 @@
 .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 20px;
+    padding: 0 5%;
 }
 
 #hero {
@@ -110,6 +110,47 @@
     animation: status-blink 2s infinite;
 }
 
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-white);
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: var(--verde-neon); /* Ou a cor que você definiu no variables */
+}
+
+/* Ajuste no container do nav para separar logo de um lado e menu do outro */
+nav.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+}
+
+/* Sistema de Grid Reutilizável */
+.grid-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Divide em 2 colunas iguais */
+    gap: 40px;                      /* Espaço entre o texto e a imagem */
+    align-items: center;            /* Alinha o conteúdo verticalmente no centro */
+}
+
+/* Ajuste para o mobile: quando a tela for pequena, vira 1 coluna só */
+@media (max-width: 768px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
 @keyframes status-blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0.3; }
@@ -124,4 +165,9 @@
 @media (max-width: 600px) {
     .footer-bottom { flex-direction: column; gap: 15px; }
     .section-title { font-size: 1.8rem; } /* Diminuir títulos em telas bem pequenas */
+}
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px; /* Recuo levemente menor para ganhar espaço em celulares pequenos */
+    }
 }
