@@ -1,6 +1,8 @@
 # 🚀 Pixel Forge: Sua Oficina Digital
 
-![Capa da Pixel Forge](assets/images/banner.jpg)
+<p align="center">
+  <img src="assets/images/capa.jpg" alt="Capa Pixel Forge" width="100%">
+</p>
 
 > **"Forjando Experiências Digitais, Pixel por Pixel."**
 
