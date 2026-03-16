@@ -3,6 +3,8 @@
 @import url('layout.css');
 @import url('components.css');
 @import url('about.css');
+@import url('servicos.css');
+@import url('contato.css');
 
 /* Estilos globais finais */
 body {
