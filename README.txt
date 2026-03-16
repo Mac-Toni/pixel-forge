@@ -34,7 +34,7 @@ Tem um projeto em mente? Vamos conversar!
 * `index.html`: Página principal responsiva.
 * `/css`: Pasta contendo os arquivos CSS de cada página (`style.css` para estilos globais, `sobre.css`, `servicos.css`, `contato.css`).
 
-![Capa da Pixel Forge](assets/images/capa.jpg)
+![Capa da Pixel Forge](assets\images\capa.jpg)
 
 ---
 *Pixel Forge © 2026 - Todos os direitos reservados.*
