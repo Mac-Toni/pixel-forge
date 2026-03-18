@@ -1,6 +1,6 @@
 # 🚀 Pixel Forge: Sua Oficina Digital
 
-![Pixel Forge Capa](https://mac-toni.github.io/pixel-forge/assets/images/capa.jpg)
+![Capa do Projeto](./assets/images/capaMenor.png)
 
 > **"Forjando Experiências Digitais, Pixel por Pixel."**
 
