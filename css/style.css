@@ -11,4 +11,5 @@ body {
   background-color: var(--preto-profundo);
   color: var(--text-white);
   font-family: var(--font-main);
+  padding: 2%;
 }

@@ -46,7 +46,8 @@
     line-height: 1.8; /* Aumenta o espaço entre as linhas */
     margin-bottom: 5px;
     text-align: justify; /* Deixa o bloco de texto alinhado */
-    color: #d1d1d1;        /* Cinza suave para reduzir o contraste agressivo no fundo preto */
+    color: #d1d1d1;   /* Cinza suave para reduzir o contraste agressivo no fundo preto */
+    padding: 2%;
 }
 
 .about-image {

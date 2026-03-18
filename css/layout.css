@@ -110,21 +110,64 @@
     animation: status-blink 2s infinite;
 }
 
+/* Container do menu posicionado à direita */
+.menu-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Estilo do botão que o usuário vê */
+.menu-btn {
+    background: none;
+    border: 2px solid var(--verde-neon);
+    color: var(--verde-neon);
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+/* A lista de links que vai "escorregar" */
 .nav-links {
-    display: flex;
+    position: absolute;
+    right: 0;
+    top: 100%; /* Cola logo abaixo do botão */
+    background-color: #1a1a1a; /* Cor escura de fundo */
     list-style: none;
-    gap: 20px;
+    padding: 10px 0;
+    min-width: 160px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    
+    /* ESTADO INICIAL: Invisível e deslocado para cima */
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-20px); 
+    transition: all 0.4s ease; /* Aqui acontece a mágica do deslize */
 }
 
-.nav-links a {
+/* O QUE ACONTECE NO HOVER */
+.menu-dropdown:hover .nav-links {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0); /* Volta para a posição original */
+}
+
+.nav-links li {
+    margin: 10px 0;
+}
+
+/* Estilo dos links dentro do dropdown */
+.nav-links li a {
+    color: white;
+    padding: 10px 20px;
+    display: block;
     text-decoration: none;
-    color: var(--text-white);
-    font-weight: 700;
-    transition: 0.3s;
 }
 
-.nav-links a:hover {
-    color: var(--verde-neon); /* Ou a cor que você definiu no variables */
+.nav-links li a:hover {
+    background-color: var(--verde-neon);
+    color: black;
 }
 
 /* Ajuste no container do nav para separar logo de um lado e menu do outro */
@@ -133,6 +176,7 @@ nav.container {
     justify-content: space-between;
     align-items: center;
     padding: 20px 0;
+    position: relative;
 }
 
 /* Sistema de Grid Reutilizável */
@@ -141,6 +185,17 @@ nav.container {
     grid-template-columns: 1fr 1fr; /* Divide em 2 colunas iguais */
     gap: 40px;                      /* Espaço entre o texto e a imagem */
     align-items: center;            /* Alinha o conteúdo verticalmente no centro */
+}
+/* Animação de "escorregar" */
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Ajuste para o mobile: quando a tela for pequena, vira 1 coluna só */
