@@ -1,0 +1,24 @@
+name: Deploy para Hostinger
+
+on:
+  push:
+    branches:
+      - main # branch que dispara o deploy (pode ser outra, se preferir)
+
+jobs:
+  deploy:
+    runs-on: windows-lasted # ambiente de execução
+
+    steps:
+      - name: Checkout do código
+        uses: actions/checkout@v3
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.0
+        with:
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          local-dir: ./
+          server-dir: /publico_html
