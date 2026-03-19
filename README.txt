@@ -1,6 +1,6 @@
 # 🚀 Pixel Forge: Sua Oficina Digital
 
-![Capa do Projeto](assets/images/readme2.jpg)
+![Capa do Projeto](./assets/images/readme2.jpg)
 
 > **"Forjando Experiências Digitais, Pixel por Pixel."**
 
@@ -30,6 +30,7 @@ Nossa marca é construída sobre três pilares cromáticos:
 * **LinkedIn:** [paulo-desenvolvedor](https://www.linkedin.com/in/paulo-desenvolvedor/)
 * **GitHub:** [Mac-Toni](https://github.com/Mac-Toni)
 * **E-mail:** pixelforge.ti@gmail.com
+
 ## 🔗 Link do Site
 Você pode acessar o projeto finalizado aqui: [https://mac-toni.github.io/pixel-forge-site/](https://mac-toni.github.io/pixel-forge/)
 ---
