@@ -6,15 +6,15 @@ on:
       - main # branch que dispara o deploy (pode ser outra, se preferir)
 
 jobs:
-  deploy:
-    runs-on: windows-lasted # ambiente de execução
+  ftp-deploy:
+    runs-on: ubuntu-lasted # ambiente de execução
 
     steps:
-      - name: Checkout do código
+      - name: Checkout
         uses: actions/checkout@v3
 
-      - name: Deploy via FTP
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.0
+      - name: FTP Deploy
+        uses: SamKirkland/FTP-Deploy-Action@v4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
