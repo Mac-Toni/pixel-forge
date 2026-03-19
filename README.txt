@@ -32,6 +32,6 @@ Nossa marca é construída sobre três pilares cromáticos:
 * **E-mail:** pixelforge.ti@gmail.com
 
 ## 🔗 Link do Site
-Você pode acessar o projeto finalizado aqui: [https://mac-toni.github.io/pixel-forge-site/](https://mac-toni.github.io/pixel-forge/)
+Você pode acessar o projeto finalizado aqui: (https://mac-toni.github.io/pixel-forge/)
 ---
 *Pixel Forge © 2026 - Todos os direitos reservados.*
