@@ -1,6 +1,6 @@
 # 🚀 Pixel Forge: Sua Oficina Digital
 
-
+![Capa do Projeto](./assets/images/readme2.jpg)
 
 > **"Forjando Experiências Digitais, Pixel por Pixel."**
 
