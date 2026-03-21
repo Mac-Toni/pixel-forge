@@ -3,22 +3,22 @@ name: Deploy para Hostinger
 on:
   push:
     branches:
-      - main # branch que dispara o deploy (pode ser outra, se preferir)
+      - main
 
 jobs:
   ftp-deploy:
-    runs-on: ubuntu-lasted # ambiente de execução
+    runs-on: ubuntu-latest
 
     steps:
       - name: Checkout
         uses: actions/checkout@v3
 
       - name: FTP Deploy
-        uses: SamKirkland/FTP-Deploy-Action@v4
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ${{ secrets.FTP_SERVER }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
+          protocol: ftp
           local-dir: ./
-          server-dir: /publico_html
+          server-dir: public_html/

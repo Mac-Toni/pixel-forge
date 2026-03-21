@@ -232,8 +232,8 @@ option { background-color: var(--cinza-escuro); color: var(--text-white); }
     gap: 25px; 
     margin: 20px 0;
 }
-.trabalhe-ia a { color: var(--verde-neon); font-size: 1.8rem; text-decoration: none; transition: 0.3s; }
-.trabalhe-ia a:hover { color: var(--laranja-neon); transform: translateY(-3px); }
+/*.trabalhe-ia a { color: var(--verde-neon); font-size: 1.8rem; text-decoration: none; transition: 0.3s; }
+.trabalhe-ia a:hover { color: var(--laranja-neon); transform: translateY(-3px); }*/
 
 .trabalhe-tagline {
     font-weight: 800;
