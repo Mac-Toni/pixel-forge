@@ -5,10 +5,16 @@
 }
 
 .pixel-highlight {
-    color: var(--verde-neon);
-    animation: pulse-green 2s infinite ease-in-out;
-    /*font-weight: 800; */
+    color: var(--verde-neon) !important;
+    font-weight: 800;
+    display: inline; 
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    animation: pulse-green-fixed 2s infinite ease-in-out; /* 3. A animação agora deve ser focada no brilho, não no tamanho */
+   
 }
+
 /* --- DESTAQUE EM LARANJA NEON --- */
 .pixel-highlight-laranja {
     color: var(--laranja-neon); /* Mudamos a cor base para laranja */
@@ -201,4 +207,15 @@
     color: #000;
     box-shadow: 0 0 25px var(--verde-neon);
     transform: translateY(-3px);
+}
+
+@keyframes neon-glow {
+    0%, 100% {
+        text-shadow: 0 0 5px rgba(57, 255, 20, 0.5);
+        opacity: 0.8;
+    }
+    50% {
+        text-shadow: 0 0 15px rgba(57, 255, 20, 1), 0 0 25px rgba(57, 255, 20, 0.5);
+        opacity: 1;
+    }
 }
