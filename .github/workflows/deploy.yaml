@@ -22,4 +22,4 @@ jobs:
           protocol: ftp
           local-dir: ./
           server-dir: /public_html/
-          
+          port: 21
