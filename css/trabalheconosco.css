@@ -180,7 +180,7 @@ option { background-color: var(--cinza-escuro); color: var(--text-white); }
     border: none;
     border-radius: 8px;
     font-weight: bold;
-    text-transform: uppercase;
+    text-transform: none;
     cursor: pointer;
     transition: 0.3s;
 }

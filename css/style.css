@@ -72,6 +72,18 @@ body {
     opacity: 0.6;
 }
 
+.footer-info{
+    width: 100%;
+    max-width: 1000px;
+    padding-top: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size:1.0rem;
+    opacity: 1.5;
+    color: var(--laranja-neon);
+}
+
 /* Bolinha de Status Animada */
 .status-dot {
     height: 8px;
