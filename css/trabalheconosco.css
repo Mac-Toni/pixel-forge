@@ -104,10 +104,10 @@ h1 .pixel-highlight {
 
 .file-wrapper {
   position: relative;
-  padding: 12px;
-  border: 2px solid var(--verde-neon); /* cor inicial */
+  padding: 8px;
+  border: 2.7px solid var(--verde-neon); /* cor inicial */
   border-radius: 8px;
-  animation: border-move 2.5s linear infinite; /* animação contínua */
+  animation: border-move 2.7s linear infinite; /* animação contínua */
 }
 
 @keyframes border-move {
