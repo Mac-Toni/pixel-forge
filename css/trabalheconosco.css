@@ -94,7 +94,7 @@ h1 .pixel-highlight {
 /* Deixando o botão com a largura certa e centralizado */
 .btn-pixel {
     margin-top: 10px;
-    padding: 15px;
+    padding: 12px;
     cursor: pointer;
     font-weight: bold;
     text-transform: uppercase;
@@ -102,16 +102,30 @@ h1 .pixel-highlight {
     /* Adicione aqui o estilo de borda/brilho que você já usa no resto do site */
 }
 
-.btn-upload {
-    display: inline-block;
-    padding: 12px 20px;
-    background: rgba(255, 95, 31, 0.3);
-   /* border: 2px dashed var(--verde-neon);*/
-    color: var(--verde-neon);
-    border-radius: 8px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    text-align: center;
+.file-wrapper {
+  position: relative;
+  padding: 12px;
+  border: 2px solid var(--verde-neon); /* cor inicial */
+  border-radius: 8px;
+  animation: border-move 2.5s linear infinite; /* animação contínua */
+}
+
+@keyframes border-move {
+  0% {
+    border-color: var(--verde-neon);
+  }
+  25% {
+    border-color: #fff;
+  }
+  50% {
+    border-color: #ff6600;
+  }
+  75% {
+    border-color: #000; /* preto, dá a impressão de sumir */
+  }
+  100% {
+    border-color: var(--verde-neon);
+  }
 }
 
 .btn-upload:hover {
