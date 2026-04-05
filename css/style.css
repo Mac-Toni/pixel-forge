@@ -14,6 +14,15 @@ body {
   font-family: var(--font-main);
   padding: 2%;
 }
+
+/* Impede a seleção de texto em todo o site */
+body {
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE10+/Edge */
+    user-select: none;         /* Padrão (Chrome, Opera, etc.) */
+}
+
 /* --- CONFIGURAÇÕES DO FOOTER --- */
 .main-footer {
     background-color: var(--cinza-escuro);
