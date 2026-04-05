@@ -91,9 +91,18 @@ body {
     background-color: #39ff14; /* Verde Neon */
     border-radius: 50%;
     display: inline-block;
-    margin-right: 5px;
+    margin-right: 2px;
+    margin-left: 10px;
     box-shadow: 0 0 8px #39ff14;
     animation: pulse-green 2s infinite;
+}
+
+.bandeira {
+  display: flex; /* Adicione isso! */
+  position: relative; /* Pode manter se for usar top/left/z-index depois */
+  justify-content: center; /* Centraliza o grupo */
+  gap: 5px; 
+  margin-top: 8px;
 }
 
 @keyframes pulse-green {

@@ -182,7 +182,8 @@
     /*font-family: 'Courier New', Courier, monospace; */
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.7);
-    letter-spacing: 1px;
+    letter-spacing: 1.2px;
+    margin-right: 8px;
 }
 
 .whatsapp-btn {
