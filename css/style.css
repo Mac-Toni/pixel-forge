@@ -101,9 +101,9 @@ body {
     display: flex !important;
     flex-direction: row !important; /* ISSO garante que é linha, não coluna */
     justify-content: space-between; /* O seu original que você gosta */
-    gap: 5px;
+    gap: 3px;
     margin-top: 8px;
-    width: 60px; /* Coloque a largura exata de 3 bandeiras (20+20+20) */
+    width: 40px; /* Coloque a largura exata de 2 bandeiras (20+20) */
 }
 
 .bandeira img {
