@@ -50,8 +50,8 @@
 
 .contact-link:hover .info-item {
     border-color: var(--laranja-pixel);
-    background: rgba(255, 95, 31, 0.3);
-    transform: translateY(-5px);
+    background: black;
+    transform: translate(-5px);
     transition: 0.3s;
 }
 
