@@ -112,6 +112,59 @@ body {
     display: block; 
 }
 
+/* 1. O Botão flutuante */
+#btnTop {
+    /* Posicionamento fixo no "canto do relógio" */
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    z-index: 999;
+
+    /* Tamanho e Formato */
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Redondo para parecer um elemento de UI moderno */
+    
+    /* Cores da Pixel Forge */
+    background-color: #000; /* Fundo preto metálico */
+    color: #FF8C00; /* Laranja (cor do rosto do gato Pixel) */
+    border: 2px solid #39FF14; /* Borda Verde Neon */
+    
+    /* Interação e Cursor */
+    cursor: pointer;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    /* Sombra Neon (Glow) */
+    box-shadow: 0 0 15px rgba(57, 255, 20, 0.4);
+    
+    /* Escondido por padrão para o efeito de surgimento */
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s ease-in-out;
+}
+
+/* 2. Efeito ao passar o mouse (Hover) */
+#btnTop:hover {
+    background-color: #39FF14; /* Inverte: fundo fica verde neon */
+    color: #000; /* Ícone fica preto */
+    transform: translateY(-5px) scale(1.1); /* Pula e cresce levemente */
+    box-shadow: 0 0 25px rgba(57, 255, 20, 0.7); /* Aumenta o brilho */
+}
+
+/* 3. Classe que o JavaScript vai ativar ao rolar a página */
+#btnTop.visivel {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* 4. Ajuste para o ícone (Font Awesome) */
+#btnTop i {
+    transition: transform 0.3s ease;
+}
+
 @keyframes pulse-green {
     0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(57, 255, 20, 0.7); }
     70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(57, 255, 20, 0); }

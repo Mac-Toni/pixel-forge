@@ -126,9 +126,9 @@
     </footer>
         <div class="bandeira">
         <img src="assets/icons/do-brasil.ico" style="display: inline-block; width: 20px; height: 20px;" alt="Brasil">
-        <img src="assets/icons/portugal.ico" style="display: inline-block; width: 20px; height: 20px;" alt="Portugal">
     </div>
-
+<button onclick="voltarAoTopo()" id="btnTop" title="Voltar ao topo" aria-label="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i> </button>
 
     <script>
         // Lógica para mostrar o nome do arquivo selecionado
@@ -163,6 +163,28 @@
                 successMsg.style.display = 'block'; 
             }, 1500);
         });
+        // --- NOVA FUNÇÃO: Voltar ao Topo (Estilo Pixel Forge) ---
+        
+        const btn = document.getElementById("btnTop");
+
+        // Monitora a rolagem da página
+        window.onscroll = function() {
+            // Se rolar mais de 300px, adiciona a classe que mostra o botão
+            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+                btn.classList.add("visivel");
+            } else {
+                btn.classList.remove("visivel");
+            }
+        };
+
+        // Função para voltar ao topo
+        function voltarAoTopo() {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+    
     </script>
 </body>
 </html>
