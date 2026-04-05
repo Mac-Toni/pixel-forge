@@ -18,16 +18,16 @@
                     <span class="pixel-highlight-laranja"> (Web & Mobile)</span>
                 </a>
             </div>
-    <div class="menu-dropdown">
-    <button class="menu-btn">Menu ☰</button>
-    <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="sobre.html">Sobre</a></li>
-        <li><a href="servicos.html">Serviços</a></li>
-        <li><a href="contato.html">Contato</a></li>
-        <li><a href="trabalheconosco.html" >Trabalhe Conosco</a></li>
-    </ul>
-</div>
+            <div class="menu-dropdown">
+                <button class="menu-btn">Menu ☰</button>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="sobre.html">Sobre</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                    <li><a href="trabalheconosco.html">Trabalhe Conosco</a></li>
+                </ul>
+            </div>
         </nav>
     </header>
 
@@ -36,9 +36,14 @@
             <h1>Inicie seu <span class="pixel-highlight">Projeto</span></h1>
             <p>A forja está pronta para transformar seu código em realidade.</p>
         </section>
+
+        <div id="success-message" class="pixel-alert" style="display: none; margin-bottom: 30px;">
+            <i class="fas fa-check-circle"></i>
+            <p>Mensagem enviada com sucesso! O sistema da <strong>Pixel Forge</strong> recebeu seu contato.</p>
+        </div>
+
         <div class="grid-2">
             <section class="contact-info">
-    
                 <a href="https://wa.me/5553999045223" target="_blank" class="contact-link">
                     <div class="info-item">
                         <i class="fab fa-whatsapp"></i>
@@ -81,101 +86,126 @@
             </section>
 
             <section class="contact-form">
-                <form action="https://formspree.io/f/xeerreoo" method="POST">
+                <form id="form-contato" action="https://formspree.io/f/xeerreoo" method="POST" enctype="multipart/form-data">
                     
                     <input type="text" name="nome" placeholder="Seu Nome" required>
-                    
                     <input type="email" name="email" placeholder="Seu E-mail" required>
-                    <input type="hidden" name="_next" value="https://mac-toni.github.io/pixel-forge-site/obrigado.html">
+                    
                     <select name="servico">
                         <option value="" disabled selected>O que você precisa?</option>
-                        <option value="web">Instalação de Redes</option>
+                        <option value="redes">Instalação de Redes</option>
                         <option value="web">Desenvolvimento Web</option>
                         <option value="mobile">Aplicativo Mobile</option>
                         <option value="consultoria">Consultoria Técnica</option>
                     </select>
+
+                    <div class="file-upload-wrapper" style="margin-bottom: 15px;">
+                        <label for="anexo-projeto" class="btn-pixel" style="display: inline-block; cursor: pointer; font-size: 0.9rem; padding: 8px 15px;">
+                            <i class="fas fa-paperclip"></i> Anexar Briefing ou Arquivo
+                        </label>
+                        <input type="file" id="anexo-projeto" name="anexo" style="display: none;">
+                        <p id="file-name" style="font-size: 0.8rem; margin-top: 5px; opacity: 0.6; color: #fff;">Nenhum arquivo selecionado (Máx: 5MB)</p>
+                    </div>
                     
                     <textarea name="mensagem" placeholder="Conte-me sobre o seu projeto..." rows="5" required></textarea>
                     
                     <input type="hidden" name="_subject" value="Novo Orçamento - Pixel Forge">
                     <input type="hidden" name="_next" value="https://mac-toni.github.io/pixel-forge/obrigado.html">
+                    
                     <button type="submit" class="btn-pixel">Enviar para a Forja</button>
                 </form>
             </section>
         </div>
+
         <div class="hero-image-container">
             <img src="assets/images/pixel-mascote-2.jpg" alt="Pixel, o gato geek da Pixel Forge" class="mascote-pixel" loading="eager">
         </div>
-
     </main>
 
-<footer class="main-footer">
-    <div class="footer-content container">
-        
-        <div class="footer-brand">
-            <p class="footer-logo">
-                <span class="pixel-highlight-laranja">Pixel</span><span class="pixel-highlight-laranja"> Forge</span>
-            </p>
-            <p class="footer-tagline">Forjando soluções, entregando experiências</p>
-        </div>
-
-       <div class="trabalhe-ia">
-    <a href="https://www.linkedin.com/in/paulo-desenvolvedor/" target="_blank">
-        <i class="fab fa-linkedin"></i>
-    </a>
-
-    <a href="https://github.com/Mac-Toni" target="_blank">
-        <i class="fab fa-github"></i>
-    </a>
-
-    <a href="https://www.instagram.com/pixelforge.ti/" target="_blank">
-        <i class="fab fa-instagram"></i>
-    </a>
-
-    <a href="mailto:paulo@voxy.tec.br">
-        <i class="far fa-envelope"></i>
-    </a>
-
-    <a href="https://wa.me/5553999045223" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
-</div>
-
-        <div class="footer-bottom">
-            <div class="footer-info">
-                <p>&copy; 2026 Pixel Forge | Desenvolvido por: www.voxy.tec.br | Rua Ismael Soares, 88 | Bagé/RS | CNPJ: 59.880.051/0001-06</p>
+    <footer class="main-footer">
+        <div class="footer-content container">
+            <div class="footer-brand">
+                <p class="footer-logo">
+                    <span class="pixel-highlight-laranja">Pixel</span><span class="pixel-highlight-laranja"> Forge</span>
+                </p>
+                <p class="footer-tagline">Forjando soluções, entregando experiências</p>
             </div>
-            <div class="system-status">
-                <span class="status-dot"></span> Status: <span class="status-text">Online</span>
+
+            <div class="trabalhe-ia">
+                <a href="https://www.linkedin.com/in/paulo-desenvolvedor/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Mac-Toni" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/pixelforge.ti/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:paulo@voxy.tec.br"><i class="far fa-envelope"></i></a>
+                <a href="https://wa.me/5553999045223" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="footer-info">
+                    <p>&copy; 2026 Pixel Forge | Desenvolvido por: www.voxy.tec.br | Rua Ismael Soares, 88 | Bagé/RS | CNPJ: 59.880.051/0001-06</p>
+                </div>
+                <div class="system-status">
+                    <span class="status-dot"></span> Status: <span class="status-text">Online</span>
+                </div>
             </div>
         </div>
-    </div>
-</footer>
-    <div class="bandeira">
-        <img src="assets/icons/do-brasil.ico" style="display: inline-block; width: 20px; height: 20px;" alt="Brasil">
-    </div>
-<button onclick="voltarAoTopo()" id="btnTop" title="Voltar ao topo" aria-label="Voltar ao topo">
-        <i class="fas fa-chevron-up"></i> </button>
-        <script>
+    </footer>
+
+    <button onclick="voltarAoTopo()" id="btnTop" title="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i> 
+    </button>
+
+    <script>
+        // Lógica do botão Voltar ao Topo
         const btn = document.getElementById("btnTop");
-
-        // Monitora a rolagem da página
         window.onscroll = function() {
-            // Se rolar mais de 300px, adiciona a classe que mostra o botão
             if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
                 btn.classList.add("visivel");
             } else {
                 btn.classList.remove("visivel");
             }
         };
-
-        // Função para voltar ao topo
         function voltarAoTopo() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
+
+        // --- LÓGICA DO FORMULÁRIO E ANEXOS ---
+        const fileInput = document.getElementById('anexo-projeto');
+        const fileName = document.getElementById('file-name');
+        const form = document.getElementById('form-contato');
+        const successMsg = document.getElementById('success-message');
+
+        // Validação de arquivo e exibição do nome
+        fileInput.addEventListener('change', function() {
+            const limiteMB = 5;
+            if (this.files && this.files.length > 0) {
+                const tamanhoArquivo = this.files[0].size / 1024 / 1024; // Converte para MB
+
+                if (tamanhoArquivo > limiteMB) {
+                    alert("O arquivo é muito pesado! Por favor, anexe algo com menos de 5MB.");
+                    this.value = ""; // Limpa o input
+                    fileName.textContent = "Arquivo rejeitado (maior que 5MB)";
+                    fileName.style.color = "#FF4500"; // Laranja para erro
+                } else {
+                    fileName.textContent = `Arquivo: ${this.files[0].name}`;
+                    fileName.style.opacity = "1";
+                    fileName.style.color = "var(--verde-neon, #39FF14)"; 
+                }
+            }
+        });
+
+        // Simulação de envio
+        form.addEventListener('submit', function(e) {
+            e.preventDefault(); 
+
+            form.style.opacity = '0.5';
+            form.querySelector('button').innerText = 'Forjando Envio...';
+
+            setTimeout(() => {
+                form.style.display = 'none'; 
+                successMsg.style.display = 'block';
+                window.scrollTo({ top: successMsg.offsetTop - 100, behavior: 'smooth' });
+            }, 1500);
+        });
     </script>
 </body>
 </html>
