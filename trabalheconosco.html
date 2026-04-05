@@ -66,7 +66,7 @@
             <div class="trabalhe-group">
                 <label>Seu Currículo (PDF ou Imagem)</label>
                 <div class="file-wrapper">
-                    <label for="curriculo-upload" class="btn-upload">
+                    <label for="curriculo-upload" class="btn-upload" style="cursor: pointer;">
                         <i class="fas fa-cloud-upload-alt"></i> Selecionar Arquivo
                     </label>
                     <input type="file" id="curriculo-upload" name="curriculo" accept=".pdf, .jpg, .png" required style="display: none;">
@@ -78,14 +78,16 @@
             <button type="submit" class="btn-pixel">Enviar Candidatura</button>
         </form>
 
-        <div id="success-message" class="pixel-alert" style="display: none;">
+        <div id="success-message" class="pixel-alert" style="display: none; cursor: pointer;">
             <i class="fas fa-check-circle"></i>
             <p>Candidatura enviada com sucesso! O sistema da <strong>Pixel Forge</strong> recebeu seu currículo.</p>
+            <small style="display: block; margin-top: 10px; opacity: 0.7;">(Clique em qualquer lugar para continuar navegando)</small>
         </div>
     </main>
-            <div class="hero-image-container">
-                <img src="assets/images/pixel-mascote-4.jpg" alt="Pixel, o gato geek da Pixel Forge" class="mascote-pixel" loading="eager">
-            </div>
+
+    <div class="hero-image-container">
+        <img src="assets/images/pixel-mascote-4.jpg" alt="Pixel, o gato geek da Pixel Forge" class="mascote-pixel" loading="eager">
+    </div>
 
     <footer class="main-footer">
         <div class="footer-content container">
@@ -97,21 +99,11 @@
             </div>
 
             <div class="trabalhe-ia">
-                <a href="https://www.linkedin.com/in/paulo-desenvolvedor/" target="_blank">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-                <a href="https://github.com/Mac-Toni" target="_blank">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="https://www.instagram.com/pixelforge.ti/" target="_blank">
-                    <i class="fab fa-instagram"></i>
-                </a>
-                <a href="mailto:paulo@voxy.tec.br">
-                    <i class="far fa-envelope"></i>
-                </a>
-                <a href="https://wa.me/5553999045223" target="_blank">
-                    <i class="fab fa-whatsapp"></i>
-                </a>
+                <a href="https://www.linkedin.com/in/paulo-desenvolvedor/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/Mac-Toni" target="_blank"><i class="fab fa-github"></i></a>
+                <a href="https://www.instagram.com/pixelforge.ti/" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="mailto:paulo@voxy.tec.br"><i class="far fa-envelope"></i></a>
+                <a href="https://wa.me/5553999045223" target="_blank"><i class="fab fa-whatsapp"></i></a>
             </div>
 
             <div class="footer-bottom">
@@ -124,11 +116,14 @@
             </div>
         </div>
     </footer>
-        <div class="bandeira">
+
+    <div class="bandeira">
         <img src="assets/icons/do-brasil.ico" style="display: inline-block; width: 20px; height: 20px;" alt="Brasil">
     </div>
-<button onclick="voltarAoTopo()" id="btnTop" title="Voltar ao topo" aria-label="Voltar ao topo">
-        <i class="fas fa-chevron-up"></i> </button>
+
+    <button onclick="voltarAoTopo()" id="btnTop" title="Voltar ao topo" aria-label="Voltar ao topo">
+        <i class="fas fa-chevron-up"></i> 
+    </button>
 
     <script>
         // Lógica para mostrar o nome do arquivo selecionado
@@ -139,7 +134,6 @@
             if (this.files && this.files.length > 0) {
                 fileName.textContent = `Arquivo selecionado: ${this.files[0].name}`;
                 fileName.style.opacity = "1";
-                // Tenta usar a cor do verde-neon se estiver no seu CSS, senão usa um verde padrão
                 fileName.style.color = "var(--verde-neon, #39FF14)"; 
             } else {
                 fileName.textContent = "Nenhum arquivo selecionado";
@@ -148,28 +142,47 @@
             }
         });
 
+        // --- FUNÇÃO PARA DESTRAVAR A INTERAÇÃO ---
+        function destravarPagina() {
+            document.body.style.pointerEvents = "auto";
+            document.body.style.overflow = "auto";
+            document.body.style.userSelect = "auto";
+            console.log("Navegação liberada na área de talentos.");
+        }
+
         // Lógica de submissão do formulário
         const form = document.querySelector('.trabalhe-form');
         const successMsg = document.getElementById('success-message');
+
+        // Adiciona ouvinte global para cliques após o envio
+        document.body.addEventListener('click', function() {
+            if (successMsg.style.display === 'block') {
+                destravarPagina();
+            }
+        });
 
         form.addEventListener('submit', function(e) {
             e.preventDefault(); 
 
             form.style.opacity = '0.5';
-            form.querySelector('button').innerText = 'Enviando...';
+            form.querySelector('button').innerText = 'Enviando Candidatura...';
+            form.querySelector('button').disabled = true;
 
             setTimeout(() => {
                 form.style.display = 'none'; 
                 successMsg.style.display = 'block'; 
+                
+                // Força o destrave da página assim que o form some
+                destravarPagina();
+                
+                window.scrollTo({ top: successMsg.offsetTop - 100, behavior: 'smooth' });
             }, 1500);
         });
-        // --- NOVA FUNÇÃO: Voltar ao Topo (Estilo Pixel Forge) ---
-        
+
+        // --- LÓGICA DO BOTÃO VOLTAR AO TOPO ---
         const btn = document.getElementById("btnTop");
 
-        // Monitora a rolagem da página
         window.onscroll = function() {
-            // Se rolar mais de 300px, adiciona a classe que mostra o botão
             if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
                 btn.classList.add("visivel");
             } else {
@@ -177,14 +190,12 @@
             }
         };
 
-        // Função para voltar ao topo
         function voltarAoTopo() {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
         }
-    
     </script>
 </body>
 </html>
