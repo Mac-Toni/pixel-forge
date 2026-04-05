@@ -1,11 +1,5 @@
-@import url('variables.css');
-@import url('reset.css');
-@import url('layout.css');
-@import url('components.css');
-@import url('about.css');
-@import url('servicos.css');
-@import url('contato.css');
 @import url('trabalheconosco.css');
+@import url('main.css');
 
 /* Estilos globais finais */
 body {
@@ -101,10 +95,16 @@ body {
     border-radius: 50%;
     display: inline-block;
     margin-right: 2px;
-    margin-left: 10px;
+    margin-left: 5px;
     box-shadow: 0 0 8px #39ff14;
     animation: pulse-green 2s infinite;
 }
+
+/*.system-status {
+    display: inline-block;
+    margin-right: 2px;
+    margin-left: 5px;
+}*/
 
 .bandeira {
     display: flex !important;
