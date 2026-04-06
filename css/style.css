@@ -188,3 +188,215 @@ body {
         text-align: center;
     }
 }
+/* Animação Simples */
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 992px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .about-image {
+        margin: 0 auto;
+    }
+
+    .page-header h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@keyframes neon-glow {
+    0%, 100% {
+        text-shadow: 0 0 5px rgba(57, 255, 20, 0.5);
+        opacity: 0.8;
+    }
+    50% {
+        text-shadow: 0 0 15px rgba(57, 255, 20, 1), 0 0 25px rgba(57, 255, 20, 0.5);
+        opacity: 1;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ajuste para o mobile: quando a tela for pequena, vira 1 coluna só */
+@media (max-width: 768px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@keyframes status-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+@media (max-width: 768px) {
+    #hero { flex-direction: column-reverse; text-align: center; }
+    .stats-container { gap: 20px; }
+    /* Adicione outras mudanças aqui */
+}
+
+@media (max-width: 600px) {
+    .footer-bottom { flex-direction: column; gap: 15px; }
+    .section-title { font-size: 1.8rem; } /* Diminuir títulos em telas bem pequenas */
+}
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px; /* Recuo levemente menor para ganhar espaço em celulares pequenos */
+    }
+}
+
+/* Animação suave */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade para Celulares e Tablets */
+@media (max-width: 768px) {
+    .service-detail-item {
+        grid-template-columns: 1fr; /* Força uma coluna só */
+        text-align: center;
+        padding: 60px 0;
+        gap: 50px;
+    }
+
+    /* Garante que o texto venha antes da imagem em todos os blocos no mobile */
+    .service-detail-item .service-visual {
+        order: 2;
+    }
+    
+    .service-detail-item .service-text {
+        order: 1;
+    }
+
+    .tech-list li {
+        justify-content: center;
+    }
+
+    .service-text h2 {
+        font-size: 2.2rem;
+    }
+
+    .step-number {
+        font-size: 4.5rem;
+    }
+}
+
+@keyframes pulse-green {
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(57, 255, 20, 0.7); }
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(57, 255, 20, 0); }
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(57, 255, 20, 0); }
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .footer-bottom {
+        flex-direction: column;
+        gap: 15px;
+        text-align: center;
+    }
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ajuste para o mobile: quando a tela for pequena, vira 1 coluna só */
+@media (max-width: 768px) {
+    .grid-2 {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+}
+
+@keyframes status-blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.3; }
+}
+
+@media (max-width: 768px) {
+    #hero { flex-direction: column-reverse; text-align: center; }
+    .stats-container { gap: 20px; }
+    /* Adicione outras mudanças aqui */
+}
+
+@media (max-width: 600px) {
+    .footer-bottom { flex-direction: column; gap: 15px; }
+    .section-title { font-size: 1.8rem; } /* Diminuir títulos em telas bem pequenas */
+}
+@media (max-width: 480px) {
+    .container {
+        padding: 0 15px; /* Recuo levemente menor para ganhar espaço em celulares pequenos */
+    }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Responsividade para celular */
+@media (max-width: 600px) {
+    .trabalhe-row {
+        flex-direction: column;
+        gap: 25px;
+    }
+}
+/* Responsivo: Se a tela for pequena, o WhatsApp e a Área ficam um embaixo do outro */
+@media (max-width: 600px) {
+    .trabalhe-row {
+        flex-direction: column;
+    }
+}
+
+@keyframes neon-shine {
+    0%, 100% {
+        text-shadow: 0 0 5px rgba(57, 255, 20, 0.5);
+    }
+    50% {
+        text-shadow: 0 0 15px rgba(57, 255, 20, 1), 0 0 20px rgba(57, 255, 20, 0.4);
+    }
+}
+
+/* Animação de pulsação suave para o destaque Verde Neon */
+@keyframes pulse-green {
+    0% { text-shadow: 0 0 5px var(--verde-neon); }
+    50% { text-shadow: 0 0 15px var(--verde-neon), 0 0 25px var(--verde-neon); }
+    100% { text-shadow: 0 0 5px var(--verde-neon); }
+}
+/* --- NOVA ANIMAÇÃO LARANJA NEON --- */
+@keyframes pulse-orange {
+    0% { text-shadow: 0 0 5px var(--laranja-neon), 0 0 10px rgba(255, 95, 31, 0.3); }
+    50% { text-shadow: 0 0 20px var(--laranja-neon), 0 0 30px var(--laranja-neon); }
+    100% { text-shadow: 0 0 5px var(--laranja-neon), 0 0 10px rgba(255, 95, 31, 0.3); }
+}
