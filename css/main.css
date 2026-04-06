@@ -45,7 +45,7 @@
 .logo-text {
     line-height: 1.2;
     font-size: 2.2rem;
-    font-weight: 800;
+    font-weight: 1000;
     color: var(--text-white);
 }
 
@@ -116,6 +116,7 @@
     border-radius: 4px;
     box-shadow: 0 0 10px rgba(0, 255, 102, 0.2);
     text-decoration: none;
+    margin-top: 50px;
 }
 
 .whatsapp-btn:hover {
@@ -330,7 +331,7 @@ nav.container {
     background-color: var(--cinza-escuro);
     list-style: none;
     min-width: 180px;
-    border: 1px solid #333;
+    border: 2px solid rgba(255, 95, 31, 0.3);
     border-radius: 4px;
     opacity: 0;
     visibility: hidden;

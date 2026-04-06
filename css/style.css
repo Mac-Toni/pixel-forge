@@ -100,6 +100,19 @@ body {
     animation: pulse-green 2s infinite;
 }
 
+.status-text {
+    white-space: nowrap; /* Impede que o ícone vá para baixo */
+    display: inline-block; /* Garante que o span aceite margens e alinhamentos melhor */
+    margin-bottom: 8px;    /* Espaçamento entre as linhas */
+}
+
+.status-text img {
+    width: 20px;           /* Tamanho do ícone */
+    height: 20px;
+    vertical-align: middle; /* Alinha o ícone com o meio do texto */
+    margin-left: 10px;      /* Espaço entre o texto e o ícone */
+}
+
 /*.system-status {
     display: inline-block;
     margin-right: 2px;
