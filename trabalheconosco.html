@@ -42,7 +42,7 @@
         <h1>Pixel<span class="pixel-highlight"> Forge</span></h1> 
         <p class="text-content">Mande seu currículo e venha forjar o futuro conosco.</p>
 
-        <form action="#" method="POST" enctype="multipart/form-data" class="trabalhe-form">
+        <form action="https://formspree.io/f/SEU_ID_AQUI" method="POST" enctype="multipart/form-data" class="trabalhe-form" id="form-recrutamento">
             <div class="trabalhe-group">
                 <label>Nome Completo</label>
                 <input type="text" name="nome" placeholder="Digite seu nome" required>
@@ -121,81 +121,10 @@
         <img src="assets/icons/do-brasil.ico" style="display: inline-block; width: 20px; height: 20px;" alt="Brasil">
     </div>
 
-    <button onclick="voltarAoTopo()" id="btnTop" title="Voltar ao topo" aria-label="Voltar ao topo">
+    <button id="btnTop" title="Voltar ao topo" aria-label="Voltar ao topo">
         <i class="fas fa-chevron-up"></i> 
     </button>
 
-    <script>
-        // Lógica para mostrar o nome do arquivo selecionado
-        const fileInput = document.getElementById('curriculo-upload');
-        const fileName = document.getElementById('file-name');
-
-        fileInput.addEventListener('change', function() {
-            if (this.files && this.files.length > 0) {
-                fileName.textContent = `Arquivo selecionado: ${this.files[0].name}`;
-                fileName.style.opacity = "1";
-                fileName.style.color = "var(--verde-neon, #39FF14)"; 
-            } else {
-                fileName.textContent = "Nenhum arquivo selecionado";
-                fileName.style.opacity = "0.6";
-                fileName.style.color = "inherit";
-            }
-        });
-
-        // --- FUNÇÃO PARA DESTRAVAR A INTERAÇÃO ---
-        function destravarPagina() {
-            document.body.style.pointerEvents = "auto";
-            document.body.style.overflow = "auto";
-            document.body.style.userSelect = "auto";
-            console.log("Navegação liberada na área de talentos.");
-        }
-
-        // Lógica de submissão do formulário
-        const form = document.querySelector('.trabalhe-form');
-        const successMsg = document.getElementById('success-message');
-
-        // Adiciona ouvinte global para cliques após o envio
-        document.body.addEventListener('click', function() {
-            if (successMsg.style.display === 'block') {
-                destravarPagina();
-            }
-        });
-
-        form.addEventListener('submit', function(e) {
-            e.preventDefault(); 
-
-            form.style.opacity = '0.5';
-            form.querySelector('button').innerText = 'Enviando Candidatura...';
-            form.querySelector('button').disabled = true;
-
-            setTimeout(() => {
-                form.style.display = 'none'; 
-                successMsg.style.display = 'block'; 
-                
-                // Força o destrave da página assim que o form some
-                destravarPagina();
-                
-                window.scrollTo({ top: successMsg.offsetTop - 100, behavior: 'smooth' });
-            }, 1500);
-        });
-
-        // --- LÓGICA DO BOTÃO VOLTAR AO TOPO ---
-        const btn = document.getElementById("btnTop");
-
-        window.onscroll = function() {
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                btn.classList.add("visivel");
-            } else {
-                btn.classList.remove("visivel");
-            }
-        };
-
-        function voltarAoTopo() {
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
-            });
-        }
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>

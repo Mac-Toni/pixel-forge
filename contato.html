@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="assets/images/favicon2.png">
 </head>
 <body>
     <header>
@@ -110,7 +111,6 @@
                     <textarea name="mensagem" placeholder="Conte-me sobre o seu projeto..." rows="5" required></textarea>
                     
                     <input type="hidden" name="_subject" value="Novo Orçamento - Pixel Forge">
-                    <input type="hidden" name="_next" value="https://mac-toni.github.io/pixel-forge/obrigado.html">
                     
                     <button type="submit" class="btn-pixel">Enviar para a Forja</button>
                 </form>
@@ -130,7 +130,6 @@
                 </p>
                 <p class="footer-tagline">Forjando soluções, entregando experiências</p>
             </div>
-
             <div class="trabalhe-ia">
                 <a href="https://www.linkedin.com/in/paulo-desenvolvedor/" target="_blank"><i class="fab fa-linkedin"></i></a>
                 <a href="https://github.com/Mac-Toni" target="_blank"><i class="fab fa-github"></i></a>
@@ -138,7 +137,6 @@
                 <a href="mailto:paulo@voxy.tec.br"><i class="far fa-envelope"></i></a>
                 <a href="https://wa.me/5553999045223" target="_blank"><i class="fab fa-whatsapp"></i></a>
             </div>
-
             <div class="footer-bottom">
                 <div class="footer-info">
                     <p>&copy; 2026 Pixel Forge | Desenvolvido por: www.voxy.tec.br | Rua Ismael Soares, 88 | Bagé/RS | 59.880.051/0001-06</p>
@@ -149,88 +147,15 @@
             </div>
         </div>
     </footer>
+    
     <div class="bandeira">
         <img src="assets/icons/do-brasil.ico" style="display: inline-block; width: 20px; height: 20px;" alt="Brasil">
     </div>
     
-    <button onclick="voltarAoTopo()" id="btnTop" title="Voltar ao topo">
+    <button id="btnTop" title="Voltar ao topo">
         <i class="fas fa-chevron-up"></i> 
     </button>
 
-    <script>
-        // Lógica do botão Voltar ao Topo
-        const btn = document.getElementById("btnTop");
-        window.onscroll = function() {
-            if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
-                btn.classList.add("visivel");
-            } else {
-                btn.classList.remove("visivel");
-            }
-        };
-        function voltarAoTopo() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // --- LÓGICA DO FORMULÁRIO E ANEXOS ---
-        const fileInput = document.getElementById('anexo-projeto');
-        const fileName = document.getElementById('file-name');
-        const form = document.getElementById('form-contato');
-        const successMsg = document.getElementById('success-message');
-
-        // Validação de arquivo e exibição do nome
-        fileInput.addEventListener('change', function() {
-            const limiteMB = 5;
-            if (this.files && this.files.length > 0) {
-                const tamanhoArquivo = this.files[0].size / 1024 / 1024;
-
-                if (tamanhoArquivo > limiteMB) {
-                    alert("O arquivo é muito pesado! Por favor, anexe algo com menos de 5MB.");
-                    this.value = ""; 
-                    fileName.textContent = "Arquivo rejeitado (maior que 5MB)";
-                    fileName.style.color = "#FF4500"; 
-                } else {
-                    fileName.textContent = `Arquivo: ${this.files[0].name}`;
-                    fileName.style.opacity = "1";
-                    fileName.style.color = "var(--verde-neon, #39FF14)"; 
-                }
-            }
-        });
-
-        // --- FUNÇÃO PARA DESTRAVAR A INTERAÇÃO ---
-        function destravarPagina() {
-            // Garante que o clique e o scroll funcionem no body
-            document.body.style.pointerEvents = "auto";
-            document.body.style.overflow = "auto";
-            document.body.style.userSelect = "auto";
-            console.log("Sistema destravado.");
-        }
-
-        // Adiciona ouvinte global para cliques após o envio
-        document.body.addEventListener('click', function() {
-            if (successMsg.style.display === 'block') {
-                destravarPagina();
-            }
-        });
-
-        // Simulação de envio com correção de travamento
-        form.addEventListener('submit', function(e) {
-            e.preventDefault(); 
-
-            // Feedback visual de carregamento
-            form.style.opacity = '0.5';
-            form.querySelector('button').innerText = 'Forjando Envio...';
-            form.querySelector('button').disabled = true;
-
-            setTimeout(() => {
-                form.style.display = 'none'; 
-                successMsg.style.display = 'block';
-                
-                // Destrava a página imediatamente após mostrar o sucesso
-                destravarPagina();
-                
-                window.scrollTo({ top: successMsg.offsetTop - 100, behavior: 'smooth' });
-            }, 1500);
-        });
-    </script>
+    <script src="js/main.js"></script>
 </body>
 </html>
